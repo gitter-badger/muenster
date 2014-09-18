@@ -1,0 +1,10 @@
+<a href="/companies">Back to Companies</a>
+<h1><%= @company.name %></h1>
+<%= link_to "Edit", edit_company_path %>
+<p><%= @company.description %></p>
+<ul>
+<% @jobs.each do |job| %>
+  <li><%= job.title %></li>
+  <a href="/jobs/<%= job.id %>">Learn More </a>
+<% end %>
+</ul>
